@@ -1,0 +1,154 @@
+<html  lang="en">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        My Interests!
+      </title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: Arial;
+            }
+            .column {
+                float: left;
+                width: 25%;
+                padding: 10px;
+            }
+            .column img {
+                opacity: 0.8; 
+                cursor: pointer; 
+            }
+            .column img:hover {
+                opacity: 1;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .container {
+                position: relative;
+                display: none;
+            }
+            #imgtext {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                color: white;
+                font-size: 20px;
+            }
+            .closebtn {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: white;
+                font-size: 35px;
+                cursor: pointer;
+            }
+        </style>
+        <title> 
+            My Interests
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="About me.html">My Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+            <li class="nav-item">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Recipes
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="recipe.html">Matcha Cookies</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="pumpkinspice.html">Pumpkin Spice Cookies</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        <h2>Passion For Healthcare</h2>
+        <p>
+            I am deeply passionate about using technology to drive innovation and improve healthcare systems worldwide. Currently, the Canadian healthcare system is pretty messed up. Especially for vulnerable populations including women.    
+        </p>
+        <p>
+            Here is a YouTube video to learn more: 
+        </p>
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/sJCBM9ajA5s"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br> <!-- Adding breaks for spacing -->
+        <h2>Baking</h2>
+        <p>
+            I'm also really into baking—it's something I find incredibly fun and therapeutic. There's just something about mixing ingredients, trying new recipes, and creating delicious treats from scratch that makes me feel so fulfilled. Whether it's baking a batch of cookies or attempting a more complex cake, I love the whole process and the joy it brings when sharing it with others!
+        </p>
+        <h2>My Movie Recs</h2>
+        <p>
+            I also consider myself a film enthusiast. Here are some movies I recommend (aka my Letterboxd top 4):
+        </p>
+ <!-- Image Gallery -->
+ <div style="text-align:center">
+    <p>Click on the images below to see them in detail:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+    <div class="column">
+        <img src="grandbudapesthotel.jpg" alt="Grand Budapest Hotel" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="littlewomen.jpg" alt="Little Women" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="deadpoetssociety.jpg" alt="Dead Poets Society" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="interstellar.jpg" alt="Interstellar" style="width:100%" onclick="myFunction(this);">
+    </div>
+</div>
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+    </body>
+</html>
